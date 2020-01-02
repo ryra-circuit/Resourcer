@@ -2,11 +2,11 @@ import UIKit
 import CoreLocation
 import MapKit
 
-protocol AppleMapsDirectionsDelegate {
+public protocol AppleMapsDirectionsDelegate {
     func showDirectionsOnAppleMapView(place: Place?)
 }
 
-extension AppleMapsDirectionsDelegate {
+public extension AppleMapsDirectionsDelegate {
     
     // MARK: - Open with apple maps
     func showDirectionsOnAppleMapView(place: Place?) {

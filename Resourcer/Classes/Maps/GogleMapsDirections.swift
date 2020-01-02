@@ -2,12 +2,12 @@ import UIKit
 import CoreLocation
 import MapKit
 
-protocol GoogleMapsDirectionsDelegate {
+public protocol GoogleMapsDirectionsDelegate {
     func manageGoogleMapOpeningResource(place: Place?)
     func openTrackerInBrowser(place: Place?)
 }
 
-extension GoogleMapsDirectionsDelegate {
+public extension GoogleMapsDirectionsDelegate {
     
     // MARK: - Check Google Maps opening resource
     func manageGoogleMapOpeningResource(place: Place?) {

@@ -1,21 +1,29 @@
 import UIKit
 import MessageUI
 
-struct EmailComposer {
-    var vc: UIViewController
-    var recepients: [String]
-    var subject: String?
-    var body: String?
-    var isHtml: Bool = false
+public class EmailComposer {
+    public var vc: UIViewController
+    public var recepients: [String]
+    public var subject: String?
+    public var body: String?
+    public var isHtml: Bool = false
+    
+    public init(vc: UIViewController, recepients: [String], subject: String?, body: String?, isHtml: Bool) {
+        self.vc = vc
+        self.recepients = recepients
+        self.subject = subject
+        self.body = body
+        self.isHtml = isHtml
+    }
 }
 
-protocol CommunicatorDelegate: MFMailComposeViewControllerDelegate {
+public protocol CommunicatorDelegate: MFMailComposeViewControllerDelegate {
     func makeACall(numberString: String)
     func openUrl(urlString: String)
     func composeAnEmail(composer: EmailComposer)
 }
 
-extension CommunicatorDelegate {
+public extension CommunicatorDelegate {
     
     // MARK: - Phone call
     func makeACall(numberString: String) {
