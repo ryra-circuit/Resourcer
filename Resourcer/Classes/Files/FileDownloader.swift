@@ -17,10 +17,6 @@ public extension FileDownloaderDelegate {
 
             if let data = response.result.value {
                 
-                guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
-                    return (false, "")
-                }
-                
                 if !FileManager.default.fileExists(atPath: directory.path!) {
                     try? FileManager.default.createDirectory(atPath: directory.path!, withIntermediateDirectories: true, attributes: nil)
                 }
