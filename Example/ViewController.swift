@@ -17,6 +17,7 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
 
     func testGoogleMapsDirections() {
+        let plc = Place(_id: 1, name: "", address: "", latitude: 0.0, longitude: 0.0)
         self.manageGoogleMapOpeningResource(place: nil)
     }
     
@@ -33,8 +34,8 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
     
     func composeAnEmail() {
-        //let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com"], subject: nil, body: nil, isHtml: false)
-        //self.composeAnEmail(composer: emailComposer)
+        let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com"], subject: nil, body: nil, isHtml: false)
+        self.composeAnEmail(composer: emailComposer)
     }
     
     func downloadFile() {

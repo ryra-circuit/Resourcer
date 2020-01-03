@@ -4,6 +4,7 @@ import Alamofire
 public typealias fileDownloadHandler = (_ status: Bool, _ message: String) -> ()
 
 public protocol FileDownloaderDelegate {
+    
     func downloadFileAndSaveToDocuments(from url: String, with name: String, completion: @escaping fileDownloadHandler)
 }
 

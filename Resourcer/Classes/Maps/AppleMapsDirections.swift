@@ -3,6 +3,7 @@ import CoreLocation
 import MapKit
 
 public protocol AppleMapsDirectionsDelegate {
+    
     func showDirectionsOnAppleMapView(place: Place?)
 }
 

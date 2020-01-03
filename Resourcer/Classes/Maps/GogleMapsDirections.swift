@@ -3,6 +3,7 @@ import CoreLocation
 import MapKit
 
 public protocol GoogleMapsDirectionsDelegate {
+    
     func manageGoogleMapOpeningResource(place: Place?)
     func openTrackerInBrowser(place: Place?)
 }
