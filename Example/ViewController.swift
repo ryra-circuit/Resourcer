@@ -34,7 +34,7 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
     
     func composeAnEmail() {
-        let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com"], subject: nil, body: nil, isHtml: false)
+        let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com", "e@f.com"], subject: nil, body: nil, isHtml: false)
         self.composeAnEmail(composer: emailComposer)
     }
     
