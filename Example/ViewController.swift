@@ -17,6 +17,7 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
 
     func testGoogleMapsDirections() {
+        let plc = Place(_id: 0, name: "", address: "", latitude: 0.0, longitude: 0.0)
         self.manageGoogleMapOpeningResource(place: nil)
     }
     
@@ -33,12 +34,12 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
     
     func composeAnEmail() {
-        //let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com"], subject: nil, body: nil, isHtml: false)
-        //self.composeAnEmail(composer: emailComposer)
+        let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com", "e@f.com"], subject: nil, body: nil, isHtml: false)
+        self.composeAnEmail(composer: emailComposer)
     }
     
     func downloadFile() {
-        self.downloadFileAndSaveToDocuments(from: "http://medihub-backend.sandbox8.elegant-media.com/storage/audio/seethala.mp3", with: "temp_file_name", completion: { success, message in
+        self.downloadFileAndSaveToDocuments(from: "http://medihub-backend.sandbox8.elegant-media.com/storage/audio/seethala.mp3", with: "temp_file_name", completion: { success, message, url in
             if success {
                 print(message)
             } else {
