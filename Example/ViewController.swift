@@ -17,7 +17,7 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
 
     func testGoogleMapsDirections() {
-        let plc = Place(_id: 1, name: "", address: "", latitude: 0.0, longitude: 0.0)
+        let plc = Place(_id: 0, name: "", address: "", latitude: 0.0, longitude: 0.0)
         self.manageGoogleMapOpeningResource(place: nil)
     }
     
