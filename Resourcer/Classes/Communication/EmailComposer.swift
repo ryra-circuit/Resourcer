@@ -1,6 +1,6 @@
 import UIKit
 
-public struct EmailComposer: Codable {
+public struct EmailComposer {
     
     public var vc: UIViewController
     public var recepients: [String]
@@ -15,14 +15,5 @@ public struct EmailComposer: Codable {
         self.subject = subject
         self.body = body
         self.isHtml = isHtml
-    }
-
-    public enum CodingKeys: String, CodingKey {
-
-        case vc
-        case recepients
-        case subject
-        case body
-        case isHtml = "is_html"
     }
 }
