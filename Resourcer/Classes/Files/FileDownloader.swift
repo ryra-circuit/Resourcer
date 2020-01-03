@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-public typealias fileDownloadHandler = (_ status: Bool, _ message: String) -> ()
+public typealias fileDownloadHandler = (_ status: Bool, _ message: String, _ url: URL?) -> ()
 
 public protocol FileDownloaderDelegate {
     func downloadFileAndSaveToDocuments(from url: String, with name: String, completion: @escaping fileDownloadHandler)
@@ -21,10 +21,10 @@ public extension FileDownloaderDelegate {
                 let fileURL = documentsURL.appendingPathComponent(name)
                 do {
                     try data.write(to: fileURL)
-                    completion(true, "File downloaded succesfully. You can find it at Device/Files App/On My iPhone/App/\(name).")
+                    completion(true, "File downloaded succesfully. You can find it at Device/Files App/On My iPhone/App/\(name).", fileURL)
 
                 } catch {
-                    completion(false, "Failed to downlod file.")
+                    completion(false, "Failed to downlod file.", nil)
                 }
             }
         }
