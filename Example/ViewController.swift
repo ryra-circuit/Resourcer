@@ -39,7 +39,7 @@ class ViewController: UIViewController, CommunicatorDelegate, GoogleMapsDirectio
     }
     
     func downloadFile() {
-        self.downloadFileAndSaveToDocuments(from: "http://medihub-backend.sandbox8.elegant-media.com/storage/audio/seethala.mp3", with: "temp_file_name", completion: { success, message in
+        self.downloadFileAndSaveToDocuments(from: "http://medihub-backend.sandbox8.elegant-media.com/storage/audio/seethala.mp3", with: "temp_file_name", completion: { success, message, url in
             if success {
                 print(message)
             } else {
