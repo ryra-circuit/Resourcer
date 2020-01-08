@@ -13,6 +13,18 @@ public enum MediaPickerControllerType {
     case imageAndVideo
 }
 
+public enum ImageFormat: String {
+    case png, jpeg
+}
+
+public enum JPEGQuality: CGFloat {
+    case lowest  = 0
+    case low     = 0.25
+    case medium  = 0.5
+    case high    = 0.75
+    case highest = 1
+}
+
 @objc public protocol MediaPickerControllerDelegate {
     
     @objc optional func mediaPickerControllerDidPickImage(image: UIImage, fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?)
