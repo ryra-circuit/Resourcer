@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 }
 
 
+// How to use communication services
 extension ViewController: CommunicatorDelegate {
     
     func makeACall() {
@@ -41,6 +42,7 @@ extension ViewController: CommunicatorDelegate {
 }
 
 
+// How to use Google Map services
 extension ViewController: GoogleMapsDirectionsDelegate {
     
     func testGoogleMapsDirections() {
@@ -50,6 +52,7 @@ extension ViewController: GoogleMapsDirectionsDelegate {
 }
 
 
+// How to use Apple Map services
 extension ViewController: AppleMapsDirectionsDelegate {
     
     func testAppleMapsDirections() {
@@ -58,6 +61,7 @@ extension ViewController: AppleMapsDirectionsDelegate {
 }
 
 
+// How to use file services
 extension ViewController: FileDownloaderDelegate {
     
     func downloadFile() {
@@ -71,6 +75,8 @@ extension ViewController: FileDownloaderDelegate {
     }
 }
 
+
+// How to use media picker services
 extension ViewController: MediaPickerControllerDelegate {
     
     // Show media picker using camera / photo libary
