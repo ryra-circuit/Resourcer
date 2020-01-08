@@ -91,7 +91,7 @@ extension ViewController: MediaPickerControllerDelegate {
     // MARK: Did Pick image
     func mediaPickerControllerDidPickImage(image: UIImage, fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?) {
         
-        let _newImageMediaItem = PickedMediaItem(fileType: MessageFileType.image.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: thumbnail, thumbnailData: thumbnailData, thumbnailUrl: thumbnailUrl)
+        let _newImageMediaItem = PickedMediaItem(fileType: MediaFileType.image.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: thumbnail, thumbnailData: thumbnailData, thumbnailUrl: thumbnailUrl)
         
         // Get and set / append received image
         // Set image
@@ -104,7 +104,7 @@ extension ViewController: MediaPickerControllerDelegate {
     // MARK: Did Pick video
     func mediaPickerControllerDidPickVideo(fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?) {
         
-        let _newVideoMediaItem = PickedMediaItem(fileType: MessageFileType.video.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: thumbnail, thumbnailData: thumbnailData, thumbnailUrl: thumbnailUrl)
+        let _newVideoMediaItem = PickedMediaItem(fileType: MediaFileType.video.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: thumbnail, thumbnailData: thumbnailData, thumbnailUrl: thumbnailUrl)
         
         // Get and set / append received video
         

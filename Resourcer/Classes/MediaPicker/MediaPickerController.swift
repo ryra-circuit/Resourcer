@@ -7,6 +7,10 @@ import UIKit
 import AVFoundation
 import MobileCoreServices
 
+public enum MediaFileType: String {
+    case image, audio, video, file, custom
+}
+
 public enum MediaPickerControllerType {
     case imageOnly
     case videoOnly
