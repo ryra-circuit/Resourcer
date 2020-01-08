@@ -20,6 +20,8 @@
 		60D2186023BE6E7A005A180B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D2185F23BE6E7A005A180B /* Assets.xcassets */; };
 		60D2186323BE6E7A005A180B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2186123BE6E7A005A180B /* LaunchScreen.storyboard */; };
 		60D2186B23BF01EE005A180B /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2186A23BF01EE005A180B /* EmailComposer.swift */; };
+		60DAFC6C23C6039800907D05 /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAFC6B23C6039800907D05 /* MediaPickerController.swift */; };
+		60DAFC6E23C6051D00907D05 /* PickedMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		60D2186223BE6E7A005A180B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D2186423BE6E7A005A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D2186A23BF01EE005A180B /* EmailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
+		60DAFC6B23C6039800907D05 /* MediaPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerController.swift; sourceTree = "<group>"; };
+		60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedMediaItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				60D217F623BE00F7005A180B /* Communication */,
 				60D217F123BE00F7005A180B /* Maps */,
 				60D217F423BE00F7005A180B /* Files */,
+				60DAFC6A23C6036C00907D05 /* MediaPicker */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -145,6 +150,15 @@
 				60D2186423BE6E7A005A180B /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		60DAFC6A23C6036C00907D05 /* MediaPicker */ = {
+			isa = PBXGroup;
+			children = (
+				60DAFC6B23C6039800907D05 /* MediaPickerController.swift */,
+				60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */,
+			);
+			path = MediaPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D217FA23BE00F7005A180B /* FileDownloader.swift in Sources */,
+				60DAFC6E23C6051D00907D05 /* PickedMediaItem.swift in Sources */,
 				60D217F823BE00F7005A180B /* GogleMapsDirections.swift in Sources */,
 				60D217FB23BE00F7005A180B /* Communicator.swift in Sources */,
+				60DAFC6C23C6039800907D05 /* MediaPickerController.swift in Sources */,
 				60D217F923BE00F7005A180B /* AppleMapsDirections.swift in Sources */,
 				60D2186B23BF01EE005A180B /* EmailComposer.swift in Sources */,
 				60D217FD23BE012C005A180B /* Place.swift in Sources */,
