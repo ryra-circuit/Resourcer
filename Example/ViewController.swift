@@ -110,5 +110,26 @@ extension ViewController: MediaPickerControllerDelegate {
         
         // Do your other stuff here (Set / upload video)
     }
+    
+    @IBAction func didTapOnMediaPicker(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1:
+            self.showMediaPickingServices(type: .imageOnly, source: .camera)
+        case 2:
+            self.showMediaPickingServices(type: .videoOnly, source: .camera)
+        case 3:
+            self.showMediaPickingServices(type: .imageOnly, source: .photoLibrary)
+        case 4:
+            self.showMediaPickingServices(type: .videoOnly, source: .photoLibrary)
+        case 5:
+            self.showMediaPickingServices(type: .imageAndVideo, source: .camera)
+        case 6:
+            self.showMediaPickingServices(type: .imageAndVideo, source: .savedPhotosAlbum)
+        default:
+            break
+        }
+    }
+    
 }
 

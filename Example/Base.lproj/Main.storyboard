@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pl-Wo-YLb">
@@ -28,12 +28,86 @@
                                     <constraint firstAttribute="width" secondItem="IPQ-5h-CqR" secondAttribute="height" multiplier="3:2" id="84u-ml-w8F"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-wp-qwe">
+                                <rect key="frame" x="20" y="558.66666666666663" width="374" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O97-DM-JJJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-Wr-aaN">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Camera Image"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeY-q3-A2B"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6k-vZ-7dR">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Camera Video"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qcg-NP-RDM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="yvb-xw-xd0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-J3-uc3">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-aU-1cU">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Library Image"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kr-P5-MPP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD3-rC-LkK">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Library Video"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOa-yU-Acs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ekL-VK-obF"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-qm-L1f">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKI-MC-JSd">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Camera Image/Video"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iH-CN-y4Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-Z0-2YK">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="40"/>
+                                                <state key="normal" title="Pick Library Image/Video"/>
+                                                <connections>
+                                                    <action selector="didTapOnMediaPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B3I-KN-6A0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1o5-35-GBI"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j1Y-wp-qwe" secondAttribute="trailing" constant="20" id="4zO-aG-OWq"/>
                             <constraint firstItem="1Pl-Wo-YLb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ezz-uB-nEG"/>
+                            <constraint firstItem="j1Y-wp-qwe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KnF-Jz-jcb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Pl-Wo-YLb" secondAttribute="trailing" constant="20" id="NQO-Kq-9vC"/>
                             <constraint firstItem="IPQ-5h-CqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qfc-rE-wOD"/>
+                            <constraint firstItem="j1Y-wp-qwe" firstAttribute="top" secondItem="IPQ-5h-CqR" secondAttribute="bottom" constant="20" id="Wol-HT-0SD"/>
                             <constraint firstItem="IPQ-5h-CqR" firstAttribute="top" secondItem="1Pl-Wo-YLb" secondAttribute="bottom" constant="20" id="jss-dj-NoZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IPQ-5h-CqR" secondAttribute="trailing" constant="20" id="q6y-ot-PdL"/>
                             <constraint firstItem="1Pl-Wo-YLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rnF-Zp-rwa"/>
@@ -41,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="RMe-Df-MPh"/>
+                    <size key="freeformSize" width="414" height="800"/>
                     <connections>
                         <outlet property="pickedImageView" destination="1Pl-Wo-YLb" id="Ejf-09-nEa"/>
                         <outlet property="pickedVideoView" destination="IPQ-5h-CqR" id="Xhw-6i-PqS"/>
