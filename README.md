@@ -1,5 +1,5 @@
 # Resourcer
-Communication, Maps, Files services
+Communication, Maps, Files, Media Picking services
 
 ### Requirements
 - iOS 11.0+
