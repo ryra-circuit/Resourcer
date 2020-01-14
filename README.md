@@ -7,5 +7,5 @@ Communication, Maps, Files, Media Picking services
 
 ### Installation
 
-#### Cocoapods
+#### [Cocoapods](https://cocoapods.org/pods/Resourcer)
 pod 'Resourcer'
