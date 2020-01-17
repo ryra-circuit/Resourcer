@@ -1,7 +1,7 @@
 import UIKit
 import MessageUI
 
-public protocol CommunicatorDelegate {
+public protocol CommunicatorDelegate: MFMailComposeViewControllerDelegate {
     
     func makeACall(numberString: String)
     func openUrl(urlString: String)
@@ -9,7 +9,7 @@ public protocol CommunicatorDelegate {
     func displayShareSheet(shareText: String, image: UIImage?)
 }
 
-public extension CommunicatorDelegate: MFMailComposeViewControllerDelegate {
+public extension CommunicatorDelegate {
     
     // MARK: - Phone call
     func makeACall(numberString: String) {
