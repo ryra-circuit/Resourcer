@@ -28,16 +28,23 @@ class ViewController: UIViewController {
 extension ViewController: CommunicatorDelegate {
     
     func makeACall() {
-        self.makeACall(numberString: "1234567890")
+        self.makeACall(numberString: "+61 456 000 001")
     }
     
     func openLink() {
-        self.openUrl(urlString: "http://www.espncricinfo.com/")
+        self.openUrl(urlString: "https://www.elegantmedia.com.au/")
     }
     
     func composeAnEmail() {
         let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com", "e@f.com"], subject: nil, body: nil, isHtml: false)
         self.composeAnEmail(composer: emailComposer)
+    }
+    
+    func displayShareSheet() {
+        let _shareText = "https://www.elegantmedia.com.au/"
+        let _image = #imageLiteral(resourceName: "emlogo")
+        
+        self.displayShareSheet(shareText: _shareText, image: _image)
     }
 }
 

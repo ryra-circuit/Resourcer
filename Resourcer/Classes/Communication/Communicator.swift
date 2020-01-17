@@ -1,18 +1,19 @@
 import UIKit
 import MessageUI
 
-public protocol CommunicatorDelegate: MFMailComposeViewControllerDelegate {
+public protocol CommunicatorDelegate {
     
     func makeACall(numberString: String)
     func openUrl(urlString: String)
     func composeAnEmail(composer: EmailComposer)
+    func displayShareSheet(shareText: String, image: UIImage?)
 }
 
 public extension CommunicatorDelegate {
     
     // MARK: - Phone call
     func makeACall(numberString: String) {
-        guard let number = URL(string: "tel://" + (numberString)) else {
+        guard let number = URL(string: "tel://" + (numberString.numericValues)) else {
             print("Invalid phone")
             // Show the issue here with Alert Controller
             return
@@ -39,6 +40,24 @@ public extension CommunicatorDelegate {
         }
     }
     
+    // MARK: - Open share sheet
+    func displayShareSheet(shareText: String, image: UIImage?) {
+        
+        var itmes: [Any] = []
+        
+        itmes.append(shareText)
+        
+        if let _image = image {
+            itmes.append(_image)
+        }
+        
+        let avc = UIActivityViewController(activityItems: itmes, applicationActivities: [])
+        present(avc, animated: true, completion: {})
+    }
+}
+
+public extension CommunicatorDelegate: MFMailComposeViewControllerDelegate {
+    
     // MARK: - Compose email
     func composeAnEmail(composer: EmailComposer) {
         self.openEmailComposer(composer: composer)
@@ -61,5 +80,13 @@ public extension CommunicatorDelegate {
         controller.dismiss(animated: true) { () -> Void in
             
         }
+    }
+}
+
+extension String {
+    
+    // MARK: - Remove other characters and get only numeric values
+    var numericValues: String {
+        return String(describing: filter { String($0).rangeOfCharacter(from: CharacterSet(charactersIn: "0123456789")) != nil })
     }
 }
