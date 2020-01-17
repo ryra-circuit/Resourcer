@@ -9,7 +9,7 @@ public protocol CommunicatorDelegate {
     func displayShareSheet(shareText: String, image: UIImage?)
 }
 
-public extension CommunicatorDelegate {
+public extension CommunicatorDelegate: MFMailComposeViewControllerDelegate {
     
     // MARK: - Phone call
     func makeACall(numberString: String) {
@@ -54,9 +54,6 @@ public extension CommunicatorDelegate {
         let avc = UIActivityViewController(activityItems: itmes, applicationActivities: [])
         present(avc, animated: true, completion: {})
     }
-}
-
-public extension CommunicatorDelegate: MFMailComposeViewControllerDelegate {
     
     // MARK: - Compose email
     func composeAnEmail(composer: EmailComposer) {
