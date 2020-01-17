@@ -6,7 +6,7 @@ public protocol CommunicatorDelegate: MFMailComposeViewControllerDelegate {
     func makeACall(numberString: String)
     func openUrl(urlString: String)
     func composeAnEmail(composer: EmailComposer)
-    func displayShareSheet(shareText: String, image: UIImage?)
+    func displayShareSheet(vc: UIViewController, shareText: String, image: UIImage?)
 }
 
 public extension CommunicatorDelegate {
@@ -41,7 +41,7 @@ public extension CommunicatorDelegate {
     }
     
     // MARK: - Open share sheet
-    func displayShareSheet(shareText: String, image: UIImage?) {
+    func displayShareSheet(vc: UIViewController, shareText: String, image: UIImage?) {
         
         var itmes: [Any] = []
         
@@ -52,7 +52,7 @@ public extension CommunicatorDelegate {
         }
         
         let avc = UIActivityViewController(activityItems: itmes, applicationActivities: [])
-        present(avc, animated: true, completion: {})
+        vc.present(avc, animated: true, completion: {})
     }
     
     // MARK: - Compose email
@@ -69,6 +69,7 @@ public extension CommunicatorDelegate {
         
         if MFMailComposeViewController.canSendMail() {
             composer.vc.present(mailComposeController, animated: true, completion: { () -> Void in
+                
             })
         }
     }
