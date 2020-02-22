@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.license       = "MIT (example)"
   spec.license       = { :type => "MIT", :file => "LICENSE" }
   spec.author        = { "RYRA Circuit" => "ryracircuit@gmail.com" }
+  spec.author        = { "RYRA Circuit" => "dushansapu.emedia@gmail.com" }
   spec.platform      = :ios, "11.0"
   spec.swift_version = "5.0"
   spec.source        = { :git => "https://github.com/ryra-circuit/Resourcer.git", :tag => "0.0.34" }
