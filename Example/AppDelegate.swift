@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Dushan Saputhanthri on 3/1/20.
-//  Copyright © 2020 Elegant Media Pvt Ltd. All rights reserved.
+//  Copyright © 2020 RYRA Circuit. All rights reserved.
 //
 
 import UIKit

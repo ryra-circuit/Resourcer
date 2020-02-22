@@ -3,18 +3,19 @@
 //  Example
 //
 //  Created by Dushan Saputhanthri on 3/1/20.
-//  Copyright © 2020 Elegant Media Pvt Ltd. All rights reserved.
+//  Copyright © 2020 RYRA Circuit. All rights reserved.
 //
 
 import UIKit
 import Resourcer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MediaPickerControllerDelegate {
 
     @IBOutlet weak var pickedImageView: UIImageView!
     @IBOutlet weak var pickedVideoView: UIView!
     
     var mediaPickerController: MediaPickerController?
+    var documentPickerController: DocumentPickerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ extension ViewController: CommunicatorDelegate {
         let _shareText = "https://www.elegantmedia.com.au/"
         let _image = #imageLiteral(resourceName: "emlogo")
         
-        self.displayShareSheet(shareText: _shareText, image: _image)
+        self.displayShareSheet(vc: self, shareText: _shareText, image: _image)
     }
 }
 
@@ -84,7 +85,28 @@ extension ViewController: FileDownloaderDelegate {
 
 
 // How to use media picker services
-extension ViewController: MediaPickerControllerDelegate {
+extension ViewController {
+    
+    // Action to pick media
+    @IBAction func didTapOnMediaPicker(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1:
+            self.showMediaPickingServices(type: .imageOnly, source: .camera)
+        case 2:
+            self.showMediaPickingServices(type: .videoOnly, source: .camera)
+        case 3:
+            self.showMediaPickingServices(type: .imageOnly, source: .photoLibrary)
+        case 4:
+            self.showMediaPickingServices(type: .videoOnly, source: .photoLibrary)
+        case 5:
+            self.showMediaPickingServices(type: .imageAndVideo, source: .camera)
+        case 6:
+            self.showMediaPickingServices(type: .imageAndVideo, source: .savedPhotosAlbum)
+        default:
+            break
+        }
+    }
     
     // Show media picker using camera / photo libary
     func showMediaPickingServices(type: MediaPickerControllerType, source: UIImagePickerController.SourceType) {
@@ -117,26 +139,44 @@ extension ViewController: MediaPickerControllerDelegate {
         
         // Do your other stuff here (Set / upload video)
     }
+}
+
+
+// How to use document picker services
+extension ViewController {
     
-    @IBAction func didTapOnMediaPicker(_ sender: UIButton) {
+    // Action to pick document/s
+    @IBAction func didTapOnDocumentPicker(_ sender: UIButton) {
         
         switch sender.tag {
-        case 1:
-            self.showMediaPickingServices(type: .imageOnly, source: .camera)
-        case 2:
-            self.showMediaPickingServices(type: .videoOnly, source: .camera)
-        case 3:
-            self.showMediaPickingServices(type: .imageOnly, source: .photoLibrary)
-        case 4:
-            self.showMediaPickingServices(type: .videoOnly, source: .photoLibrary)
-        case 5:
-            self.showMediaPickingServices(type: .imageAndVideo, source: .camera)
-        case 6:
-            self.showMediaPickingServices(type: .imageAndVideo, source: .savedPhotosAlbum)
+        case 7:
+            self.showDocumentPickingServices()
+        case 8:
+            break
         default:
             break
         }
     }
     
+    // Show document picker
+    func showDocumentPickingServices() {
+        
+        let _types: [String] = [kUTTypePDF as String, kUTTypeText as String, kUTTypeRTF as String, kUTTypeSpreadsheet as String]
+        
+        self.documentPickerController = DocumentPickerController(presentingViewController: self, types: _types, mode: .import)
+        self.documentPickerController?.delegate = self
+        
+        self.documentPickerController?.showDocumentPicker(presentingStyle: .formSheet, canSelectMultiple: false)
+    }
+    
+    // MARK: Did Pick document
+    func mediaPickerControllerDidPickDocument(fileData: Data?, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?) {
+        
+        let _newDocumentItem = PickedMediaItem(fileType: MediaFileType.document.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: thumbnail, thumbnailData: thumbnailData, thumbnailUrl: thumbnailUrl)
+        
+        // Get and set / append received document
+        
+        // Do your other stuff here (Set / upload document)
+    }
 }
 

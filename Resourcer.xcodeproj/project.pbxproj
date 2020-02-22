@@ -7,32 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604BE72C240187550036470B /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE71F240187540036470B /* FileDownloader.swift */; };
+		604BE72D240187550036470B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE721240187540036470B /* Services.swift */; };
+		604BE72E240187550036470B /* PickedMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE722240187540036470B /* PickedMediaItem.swift */; };
+		604BE72F240187550036470B /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE723240187540036470B /* MediaPickerController.swift */; };
+		604BE730240187550036470B /* DocumentPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE724240187540036470B /* DocumentPickerController.swift */; };
+		604BE731240187550036470B /* GogleMapsDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE726240187540036470B /* GogleMapsDirections.swift */; };
+		604BE732240187550036470B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE727240187540036470B /* Place.swift */; };
+		604BE733240187550036470B /* AppleMapsDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE728240187540036470B /* AppleMapsDirections.swift */; };
+		604BE734240187550036470B /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE72A240187550036470B /* EmailComposer.swift */; };
+		604BE735240187550036470B /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE72B240187550036470B /* Communicator.swift */; };
 		60D217EA23BDFD17005A180B /* Resourcer.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D217E823BDFD17005A180B /* Resourcer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60D217F823BE00F7005A180B /* GogleMapsDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D217F223BE00F7005A180B /* GogleMapsDirections.swift */; };
-		60D217F923BE00F7005A180B /* AppleMapsDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D217F323BE00F7005A180B /* AppleMapsDirections.swift */; };
-		60D217FA23BE00F7005A180B /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D217F523BE00F7005A180B /* FileDownloader.swift */; };
-		60D217FB23BE00F7005A180B /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D217F723BE00F7005A180B /* Communicator.swift */; };
-		60D217FD23BE012C005A180B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D217FC23BE012C005A180B /* Place.swift */; };
 		60D2185723BE6E7A005A180B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2185623BE6E7A005A180B /* AppDelegate.swift */; };
 		60D2185923BE6E7A005A180B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2185823BE6E7A005A180B /* SceneDelegate.swift */; };
 		60D2185B23BE6E7A005A180B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2185A23BE6E7A005A180B /* ViewController.swift */; };
 		60D2185E23BE6E7A005A180B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2185C23BE6E7A005A180B /* Main.storyboard */; };
 		60D2186023BE6E7A005A180B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D2185F23BE6E7A005A180B /* Assets.xcassets */; };
 		60D2186323BE6E7A005A180B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D2186123BE6E7A005A180B /* LaunchScreen.storyboard */; };
-		60D2186B23BF01EE005A180B /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2186A23BF01EE005A180B /* EmailComposer.swift */; };
-		60DAFC6C23C6039800907D05 /* MediaPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAFC6B23C6039800907D05 /* MediaPickerController.swift */; };
-		60DAFC6E23C6051D00907D05 /* PickedMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		604BE71F240187540036470B /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
+		604BE721240187540036470B /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		604BE722240187540036470B /* PickedMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedMediaItem.swift; sourceTree = "<group>"; };
+		604BE723240187540036470B /* MediaPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerController.swift; sourceTree = "<group>"; };
+		604BE724240187540036470B /* DocumentPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPickerController.swift; sourceTree = "<group>"; };
+		604BE726240187540036470B /* GogleMapsDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GogleMapsDirections.swift; sourceTree = "<group>"; };
+		604BE727240187540036470B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		604BE728240187540036470B /* AppleMapsDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapsDirections.swift; sourceTree = "<group>"; };
+		604BE72A240187550036470B /* EmailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
+		604BE72B240187550036470B /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		60D217E523BDFD17005A180B /* Resourcer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resourcer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D217E823BDFD17005A180B /* Resourcer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resourcer.h; sourceTree = "<group>"; };
 		60D217E923BDFD17005A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60D217F223BE00F7005A180B /* GogleMapsDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GogleMapsDirections.swift; sourceTree = "<group>"; };
-		60D217F323BE00F7005A180B /* AppleMapsDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapsDirections.swift; sourceTree = "<group>"; };
-		60D217F523BE00F7005A180B /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
-		60D217F723BE00F7005A180B /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
-		60D217FC23BE012C005A180B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		60D2185423BE6E7A005A180B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D2185623BE6E7A005A180B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D2185823BE6E7A005A180B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +48,6 @@
 		60D2185F23BE6E7A005A180B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D2186223BE6E7A005A180B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D2186423BE6E7A005A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60D2186A23BF01EE005A180B /* EmailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
-		60DAFC6B23C6039800907D05 /* MediaPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerController.swift; sourceTree = "<group>"; };
-		60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedMediaItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		604BE71E240187540036470B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				604BE71F240187540036470B /* FileDownloader.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		604BE720240187540036470B /* MediaPicker */ = {
+			isa = PBXGroup;
+			children = (
+				604BE721240187540036470B /* Services.swift */,
+				604BE722240187540036470B /* PickedMediaItem.swift */,
+				604BE723240187540036470B /* MediaPickerController.swift */,
+				604BE724240187540036470B /* DocumentPickerController.swift */,
+			);
+			path = MediaPicker;
+			sourceTree = "<group>";
+		};
+		604BE725240187540036470B /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				604BE726240187540036470B /* GogleMapsDirections.swift */,
+				604BE727240187540036470B /* Place.swift */,
+				604BE728240187540036470B /* AppleMapsDirections.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		604BE729240187550036470B /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				604BE72A240187550036470B /* EmailComposer.swift */,
+				604BE72B240187550036470B /* Communicator.swift */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
 		60D217DB23BDFD17005A180B = {
 			isa = PBXGroup;
 			children = (
@@ -96,39 +138,12 @@
 		60D217F023BE00F7005A180B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				60D217F623BE00F7005A180B /* Communication */,
-				60D217F123BE00F7005A180B /* Maps */,
-				60D217F423BE00F7005A180B /* Files */,
-				60DAFC6A23C6036C00907D05 /* MediaPicker */,
+				604BE729240187550036470B /* Communication */,
+				604BE71E240187540036470B /* Files */,
+				604BE725240187540036470B /* Maps */,
+				604BE720240187540036470B /* MediaPicker */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		60D217F123BE00F7005A180B /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				60D217F223BE00F7005A180B /* GogleMapsDirections.swift */,
-				60D217F323BE00F7005A180B /* AppleMapsDirections.swift */,
-				60D217FC23BE012C005A180B /* Place.swift */,
-			);
-			path = Maps;
-			sourceTree = "<group>";
-		};
-		60D217F423BE00F7005A180B /* Files */ = {
-			isa = PBXGroup;
-			children = (
-				60D217F523BE00F7005A180B /* FileDownloader.swift */,
-			);
-			path = Files;
-			sourceTree = "<group>";
-		};
-		60D217F623BE00F7005A180B /* Communication */ = {
-			isa = PBXGroup;
-			children = (
-				60D217F723BE00F7005A180B /* Communicator.swift */,
-				60D2186A23BF01EE005A180B /* EmailComposer.swift */,
-			);
-			path = Communication;
 			sourceTree = "<group>";
 		};
 		60D2184123BE69AA005A180B /* Frameworks */ = {
@@ -150,15 +165,6 @@
 				60D2186423BE6E7A005A180B /* Info.plist */,
 			);
 			path = Example;
-			sourceTree = "<group>";
-		};
-		60DAFC6A23C6036C00907D05 /* MediaPicker */ = {
-			isa = PBXGroup;
-			children = (
-				60DAFC6B23C6039800907D05 /* MediaPickerController.swift */,
-				60DAFC6D23C6051D00907D05 /* PickedMediaItem.swift */,
-			);
-			path = MediaPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,14 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D217FA23BE00F7005A180B /* FileDownloader.swift in Sources */,
-				60DAFC6E23C6051D00907D05 /* PickedMediaItem.swift in Sources */,
-				60D217F823BE00F7005A180B /* GogleMapsDirections.swift in Sources */,
-				60D217FB23BE00F7005A180B /* Communicator.swift in Sources */,
-				60DAFC6C23C6039800907D05 /* MediaPickerController.swift in Sources */,
-				60D217F923BE00F7005A180B /* AppleMapsDirections.swift in Sources */,
-				60D2186B23BF01EE005A180B /* EmailComposer.swift in Sources */,
-				60D217FD23BE012C005A180B /* Place.swift in Sources */,
+				604BE735240187550036470B /* Communicator.swift in Sources */,
+				604BE72F240187550036470B /* MediaPickerController.swift in Sources */,
+				604BE72C240187550036470B /* FileDownloader.swift in Sources */,
+				604BE730240187550036470B /* DocumentPickerController.swift in Sources */,
+				604BE733240187550036470B /* AppleMapsDirections.swift in Sources */,
+				604BE731240187550036470B /* GogleMapsDirections.swift in Sources */,
+				604BE72D240187550036470B /* Services.swift in Sources */,
+				604BE732240187550036470B /* Place.swift in Sources */,
+				604BE734240187550036470B /* EmailComposer.swift in Sources */,
+				604BE72E240187550036470B /* PickedMediaItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,10 +3,10 @@ import Alamofire
 
 public typealias fileDownloadHandler = (_ status: Bool, _ message: String,_ url: URL?) -> ()
 
-var sessionManager: SessionManager = {
+var sessionManager: Session = {
   let configuration = URLSessionConfiguration.default
-  configuration.timeoutIntervalForRequest = 20
-  return SessionManager(configuration: configuration)
+  configuration.timeoutIntervalForRequest = 60
+  return Session(configuration: configuration)
 }()
 
 public protocol FileDownloaderDelegate {
@@ -21,7 +21,7 @@ public extension FileDownloaderDelegate {
         sessionManager = {
             let configuration = config
             configuration.timeoutIntervalForRequest = timeout
-            return SessionManager(configuration: configuration)
+            return Session(configuration: configuration)
         }()
         
         sessionManager.request(url,method: method, parameters: parameters, encoding: encoding, headers: headers).downloadProgress(queue: .main) { progress in
