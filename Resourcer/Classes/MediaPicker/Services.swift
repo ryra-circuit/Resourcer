@@ -2,8 +2,12 @@ import UIKit
 import AVFoundation
 import MobileCoreServices
 
-public enum MediaFileType: String {
-    case image, audio, video, document, custom
+public enum MediaFileType: Int {
+    case image = 1
+    case audio = 2
+    case video = 3
+    case document = 4
+    case custom = 0
 }
 
 
@@ -31,13 +35,21 @@ public enum JPEGQuality: CGFloat {
 
 @objc public protocol MediaPickerControllerDelegate {
     
+    //MARK: Pick media services
     @objc optional func mediaPickerControllerDidPickImage(image: UIImage, fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?)
-    
     @objc optional func mediaPickerControllerDidPickVideo(fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?)
-    
     @objc optional func mediaPickerControllerDidPickAudio(fileData: Data, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?)
+    @objc optional func mediaPickerControllerDidFailedToPickMedia(error: Error)
     
+    
+    //MARK: Pick document services
     @objc optional func mediaPickerControllerDidPickDocument(fileData: Data?, fileUrl: URL, thumbnail: UIImage?, thumbnailData: Data?, thumbnailUrl: URL?)
+    @objc optional func mediaPickerControllerDidFailedToPickDocument(error: Error)
+    
+    
+    //MARK: Record audio services
+    @objc optional func mediaPickerControllerDidRecordAudio(fileData: Data?, fileUrl: URL)
+    @objc optional func mediaPickerControllerDidFailedToRecordAudio(error: Error)
 }
 
 

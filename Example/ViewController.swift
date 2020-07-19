@@ -1,13 +1,13 @@
 //
 //  ViewController.swift
-//  Example
-//
-//  Created by Dushan Saputhanthri on 3/1/20.
 //  Copyright © 2020 RYRA Circuit. All rights reserved.
 //
 
 import UIKit
 import Resourcer
+import AVFoundation
+import MobileCoreServices
+import MessageUI
 
 class ViewController: UIViewController, MediaPickerControllerDelegate {
 
@@ -16,10 +16,17 @@ class ViewController: UIViewController, MediaPickerControllerDelegate {
     
     var mediaPickerController: MediaPickerController?
     var documentPickerController: DocumentPickerController?
+    var audioRecorderController: AudioRecorderController?
+    
+    var recordingSession: AVAudioSession?
+    
+    @IBOutlet weak var audioRecordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Setup audio recording session
+        self.setupRecordingSession()
     }
     
 }
@@ -39,6 +46,17 @@ extension ViewController: CommunicatorDelegate {
     func composeAnEmail() {
         let emailComposer = EmailComposer(vc: self, recepients: ["a@b.com", "c@d.com", "e@f.com"], subject: nil, body: nil, isHtml: false)
         self.composeAnEmail(composer: emailComposer)
+    }
+    
+    func composeMessage() {
+        let messageComposer = MessageComposer(vc: self, recepients: ["+61456000001", "+6476535601", "+3287656501"], body: nil)
+        self.composeMessage(composer: messageComposer)
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true) { () -> Void in
+
+        }
     }
     
     func displayShareSheet() {
@@ -151,8 +169,6 @@ extension ViewController {
         switch sender.tag {
         case 7:
             self.showDocumentPickingServices()
-        case 8:
-            break
         default:
             break
         }
@@ -177,6 +193,98 @@ extension ViewController {
         // Get and set / append received document
         
         // Do your other stuff here (Set / upload document)
+    }
+}
+
+// How to use audio recorder
+extension ViewController {
+    
+    func setupRecordingSession() {
+        
+        recordingSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordingSession?.setCategory(.playAndRecord, mode: .voiceChat)
+            try recordingSession?.setActive(true)
+            recordingSession?.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        self.startAudioRecordingService()
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+        }
+    }
+    
+    // Start audio recording service
+    func startAudioRecordingService() {
+
+        self.audioRecorderController = AudioRecorderController(audioQuality: .medium)
+        self.audioRecorderController?.delegate = self
+        
+        self.shouldStartAudioRecordingWithLongPressGesture()
+    }
+    
+    func shouldStartAudioRecordingWithLongPressGesture() {
+        
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(recordAudioClip(_:)))
+        longPressGestureRecognizer.minimumPressDuration = 1.0 // In Seconds
+        
+        audioRecordButton.addGestureRecognizer(longPressGestureRecognizer)
+    }
+    
+    // MARK: Record Audio with long tap on button
+    @objc func recordAudioClip(_ sender: UIGestureRecognizer) {
+        
+        switch sender.state {
+        case .began:
+            audioRecordButton.backgroundColor = .red
+            audioRecordButton.setImage(#imageLiteral(resourceName: "micOrrange"), for: .normal)
+            
+            print("UILongPressGestureRecognizerStateBegan so start the recording voice here")
+            
+            //writing the function for start recording the voice here
+            self.audioRecorderController?.startRecording()
+            
+        case .ended:
+            audioRecordButton.backgroundColor = .white
+            audioRecordButton.setImage(#imageLiteral(resourceName: "micBlue"), for: .normal)
+            
+            print("UILongPressGestureRecognizerStateEnded so stop the recording voice here")
+            
+            //writing the function for stop recording the voice here
+            self.audioRecorderController?.finishRecording(success: true, url: nil)
+            
+        case .cancelled:
+            audioRecordButton.backgroundColor = .white
+            audioRecordButton.setImage(#imageLiteral(resourceName: "micBlue"), for: .normal)
+            
+            print("UILongPressGestureRecognizerStateCancelled so stop the recording voice here")
+            
+            //writing the function for stop recording the voice here
+            self.audioRecorderController?.finishRecording(success: false, url: nil)
+            
+        default:
+            break
+        }
+    }
+
+    func mediaPickerControllerDidRecordAudio(fileData: Data?, fileUrl: URL) {
+
+        let _newAudioItem = PickedMediaItem(fileType: MediaFileType.audio.rawValue, fileData: fileData, fileUrl: fileUrl, thumbnail: nil, thumbnailData: nil, thumbnailUrl: nil)
+
+        // Get and set / append received audio
+        
+        // Do your other stuff here (Set / upload audio)
+
+    }
+    
+    func mediaPickerControllerDidFailedToRecordAudio(error: Error) {
+        
     }
 }
 

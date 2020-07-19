@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601BE88124C4EA320058CAF9 /* AudioRecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BE88024C4EA320058CAF9 /* AudioRecorderController.swift */; };
+		601BE88424C4EA7B0058CAF9 /* RSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601BE88324C4EA7B0058CAF9 /* RSError.swift */; };
 		604BE72C240187550036470B /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE71F240187540036470B /* FileDownloader.swift */; };
 		604BE72D240187550036470B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE721240187540036470B /* Services.swift */; };
 		604BE72E240187550036470B /* PickedMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE722240187540036470B /* PickedMediaItem.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601BE88024C4EA320058CAF9 /* AudioRecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderController.swift; sourceTree = "<group>"; };
+		601BE88324C4EA7B0058CAF9 /* RSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSError.swift; sourceTree = "<group>"; };
 		604BE71F240187540036470B /* FileDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		604BE721240187540036470B /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		604BE722240187540036470B /* PickedMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedMediaItem.swift; sourceTree = "<group>"; };
@@ -68,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601BE88224C4EA640058CAF9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				601BE88324C4EA7B0058CAF9 /* RSError.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		604BE71E240187540036470B /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +91,11 @@
 		604BE720240187540036470B /* MediaPicker */ = {
 			isa = PBXGroup;
 			children = (
-				604BE721240187540036470B /* Services.swift */,
 				604BE722240187540036470B /* PickedMediaItem.swift */,
 				604BE723240187540036470B /* MediaPickerController.swift */,
 				604BE724240187540036470B /* DocumentPickerController.swift */,
+				601BE88024C4EA320058CAF9 /* AudioRecorderController.swift */,
+				604BE721240187540036470B /* Services.swift */,
 			);
 			path = MediaPicker;
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 				604BE71E240187540036470B /* Files */,
 				604BE725240187540036470B /* Maps */,
 				604BE720240187540036470B /* MediaPicker */,
+				601BE88224C4EA640058CAF9 /* Utility */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -350,7 +364,9 @@
 				604BE72C240187550036470B /* FileDownloader.swift in Sources */,
 				604BE730240187550036470B /* DocumentPickerController.swift in Sources */,
 				604BE733240187550036470B /* AppleMapsDirections.swift in Sources */,
+				601BE88124C4EA320058CAF9 /* AudioRecorderController.swift in Sources */,
 				604BE731240187550036470B /* GogleMapsDirections.swift in Sources */,
+				601BE88424C4EA7B0058CAF9 /* RSError.swift in Sources */,
 				604BE72D240187550036470B /* Services.swift in Sources */,
 				604BE732240187550036470B /* Place.swift in Sources */,
 				604BE734240187550036470B /* EmailComposer.swift in Sources */,
