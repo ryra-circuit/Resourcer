@@ -19,6 +19,7 @@
 		604BE733240187550036470B /* AppleMapsDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE728240187540036470B /* AppleMapsDirections.swift */; };
 		604BE734240187550036470B /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE72A240187550036470B /* EmailComposer.swift */; };
 		604BE735240187550036470B /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BE72B240187550036470B /* Communicator.swift */; };
+		60B18CCF2525CB3300C94244 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B18CCE2525CB3300C94244 /* MessageComposer.swift */; };
 		60D217EA23BDFD17005A180B /* Resourcer.h in Headers */ = {isa = PBXBuildFile; fileRef = 60D217E823BDFD17005A180B /* Resourcer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60D2185723BE6E7A005A180B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2185623BE6E7A005A180B /* AppDelegate.swift */; };
 		60D2185923BE6E7A005A180B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D2185823BE6E7A005A180B /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 		604BE728240187540036470B /* AppleMapsDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapsDirections.swift; sourceTree = "<group>"; };
 		604BE72A240187550036470B /* EmailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
 		604BE72B240187550036470B /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		60B18CCE2525CB3300C94244 /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
 		60D217E523BDFD17005A180B /* Resourcer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resourcer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D217E823BDFD17005A180B /* Resourcer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resourcer.h; sourceTree = "<group>"; };
 		60D217E923BDFD17005A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				604BE72A240187550036470B /* EmailComposer.swift */,
+				60B18CCE2525CB3300C94244 /* MessageComposer.swift */,
 				604BE72B240187550036470B /* Communicator.swift */,
 			);
 			path = Communication;
@@ -202,7 +205,6 @@
 				BC421444665B529BAC54089A /* Pods-Resourcer.debug.xcconfig */,
 				FECC14D07811F770CD6CACAA /* Pods-Resourcer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -391,6 +393,7 @@
 				604BE733240187550036470B /* AppleMapsDirections.swift in Sources */,
 				601BE88124C4EA320058CAF9 /* AudioRecorderController.swift in Sources */,
 				604BE731240187550036470B /* GogleMapsDirections.swift in Sources */,
+				60B18CCF2525CB3300C94244 /* MessageComposer.swift in Sources */,
 				601BE88424C4EA7B0058CAF9 /* RSError.swift in Sources */,
 				604BE72D240187550036470B /* Services.swift in Sources */,
 				604BE732240187550036470B /* Place.swift in Sources */,
