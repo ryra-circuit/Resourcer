@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.1.0](https://github.com/ryra-circuit/Resourcer/tree/0.1.0) (2020-09-30)
+## [0.1.0](https://github.com/ryra-circuit/Resourcer/tree/0.1.0.1) (2020-09-30)
 - New Communication Service is added (Compose sms feature)
 - Communication Services Update ("+" is allowed for phone calls)
 - Media Picker Services Update (Media type raw values are taking as Int values)
