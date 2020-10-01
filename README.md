@@ -8,7 +8,7 @@ This is communication based library with several types of communication, maps, f
 ### Installation
 
 #### [Cocoapods](https://cocoapods.org/pods/Resourcer)
-pod 'EMResourcer'
+pod 'Resourcer'
 
 ### Add below codes (Required items) into info.plist before using Media picker or/and audio recording services
 ```xml
