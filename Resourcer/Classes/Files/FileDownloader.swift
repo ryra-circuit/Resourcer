@@ -10,6 +10,7 @@ var sessionManager: Session = {
 }()
 
 public protocol FileDownloaderDelegate {
+    
     func downloadFileAndSaveToDocuments(from url: String, with name: String, config: URLSessionConfiguration, parameters: [String: Any], method: HTTPMethod, encoding: URLEncoding, headers: HTTPHeaders, timeout: Double, completion: @escaping fileDownloadHandler)
 }
 

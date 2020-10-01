@@ -2,6 +2,7 @@ import UIKit
 import AVFoundation
 import MobileCoreServices
 
+//MARK: Media types
 public enum MediaFileType: Int {
     case image = 1
     case audio = 2
@@ -11,6 +12,7 @@ public enum MediaFileType: Int {
 }
 
 
+//MARK: Media picker types
 public enum MediaPickerControllerType {
     case imageOnly
     case videoOnly
@@ -19,11 +21,13 @@ public enum MediaPickerControllerType {
 }
 
 
+//MARK: Image format/extension
 public enum ImageFormat: String {
     case png, jpeg
 }
 
 
+//MARK: JPEG Image quality
 public enum JPEGQuality: CGFloat {
     case lowest  = 0
     case low     = 0.25
@@ -33,6 +37,7 @@ public enum JPEGQuality: CGFloat {
 }
 
 
+//MARK: Services
 @objc public protocol MediaPickerControllerDelegate {
     
     //MARK: Pick media services
@@ -52,6 +57,8 @@ public enum JPEGQuality: CGFloat {
     @objc optional func mediaPickerControllerDidFailedToRecordAudio(error: Error)
 }
 
+
+//MARK: Extensions
 
 public extension URL {
     
@@ -200,5 +207,3 @@ public extension UIImage {
         }
     }
 }
-
-

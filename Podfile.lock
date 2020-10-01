@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Resourcer (0.0.36):
+    - Alamofire
+
+DEPENDENCIES:
+  - Resourcer
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Resourcer
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Resourcer: da10ac3a1106807d2548f47ac3eb653c5ae729c0
+
+PODFILE CHECKSUM: 28fef6f1c688798220b9cf0dd0733d97de564ead
+
+COCOAPODS: 1.9.3
